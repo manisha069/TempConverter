@@ -10,7 +10,7 @@
     <div class="note">
         <div class="cdiv">
             <span class="celLabel">Celcius</span>
-            <input type="number" id="cel" class="cel">
+            <input (click)="inputFunction()" type="number" id="cel" class="cel">
         </div>
         <div class="buttC">
             <button class="convertC"  (click)="changeC()">Convert</button>
@@ -29,6 +29,8 @@
             <span style="margin-top: 10px;"> {{ result }}</span>
         </div>
     </div>
+
+    <span class="heading" style="margin-top: 20px;" *ngIf="emptyError == true"> Error: no value entered!</span>
 </body>
 </html>
 

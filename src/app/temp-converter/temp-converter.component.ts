@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-temp-converter',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule],
   templateUrl: './temp-converter.component.html',
   styleUrl: './temp-converter.component.css'
 })
@@ -15,20 +16,40 @@ export class TempConverterComponent {
   c:any
   far:any;
   f:any;
+  emptyError:boolean= false;
+
   changeC(){
+    this.emptyError = false;
     this.cer = document.getElementById("cel");
-    console.log("celc alue", this.cer, this.cer.value), this.cer.innerHTML, this.cer.innerHTML.value;
     this.c = this.cer.value;
-    this.cer.value  ="";
-    // console.log("celc alue", this.cer);
+    if(this.c != "" && this.c != null)
+    {
+      this.cer.value  ="";
     this.result = ((this.c*9)/5+32)+"*F";
+    }
+   else{
+    this.emptyError = true;
+   }
+  }
+
+  inputFunction(){
+    this.emptyError = false;
+
   }
 
   changeF(){
+    this.emptyError = false;
     this.far = document.getElementById("far");
     this.f = this.far.value;
-    this.far.value  ="";
-    // console.log("far alue", this.far);
-    this.result = ((this.f-32)*5/9)+"*C";
+    
+    if(this.f != "" && this.f != null)
+      {
+        this.far.value  ="";
+        this.result = ((this.f-32)*5/9)+"*C";
+
+      }
+     else{
+      this.emptyError = true;
+     }
   }
 }
