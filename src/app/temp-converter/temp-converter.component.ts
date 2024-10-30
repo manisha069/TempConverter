@@ -19,6 +19,7 @@ export class TempConverterComponent {
   emptyError:boolean= false;
 
   changeC(){
+    
     this.emptyError = false;
     this.cer = document.getElementById("cel");
     this.c = this.cer.value;
@@ -32,9 +33,14 @@ export class TempConverterComponent {
    }
   }
 
-  inputFunction(){
+  inputFunctionC(){
     this.emptyError = false;
+    this.result = "";
+  }
 
+  inputFunctionF(){
+    this.emptyError = false;
+    this.result = "";
   }
 
   changeF(){
