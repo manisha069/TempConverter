@@ -52,8 +52,10 @@ body{
 }
 
 .cel{
-    border-color: #4b9be0;
-    border-width: 2.5px;
+    
+    border: 2px solid #4b9be0;
+    /* border-color: #4b9be0; */
+    /* border-width: 2.5px; */
     width: 133px;
     border-radius: 4px;
     font-size: 15px;
@@ -62,6 +64,11 @@ body{
     color: #4b9be0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+}
+
+.cel:focus{
+
+    outline: solid 2.5px #4b9be0;
 }
 
 .buttC{
@@ -109,8 +116,9 @@ body{
 
 .far{
 
-    border-color: #4b9be0;
-    border-width: 2.5px;
+    border: 2px solid #4b9be0;
+    /* border-color: #4b9be0; */
+    /* border-width: 2.5px; */
     width: 133px;
     border-radius: 4px;
     font-size: 15px;
@@ -118,6 +126,11 @@ body{
     height: 24px;
     color: #4b9be0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.far:focus{
+
+    outline: solid 2px #4b9be0;
 }
 
 .buttF{
